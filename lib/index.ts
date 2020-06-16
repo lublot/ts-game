@@ -7,6 +7,7 @@ var player = new CharFactory(
   0,
   document.querySelector("#gameboard")
 ).create();
+player.move(Directions.NONE)
 
 document.addEventListener("keydown", function (evt) {
   let gamepad = Gamepad.getInstance();

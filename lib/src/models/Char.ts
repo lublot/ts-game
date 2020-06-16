@@ -18,7 +18,9 @@ class Char extends Solid2D {
       [Directions.SOUTH, new Position2D(0, this.steps)],
       [Directions.SOUTHEAST, new Position2D(this.steps, this.steps)],
       [Directions.SOUTHWEST, new Position2D(-this.steps, this.steps)],
+      [Directions.NONE, new Position2D(this.x, this.y)],
     ]);
+    this.move(Directions.NONE)
   }
 
   move(direction: Directions): Boolean {
