@@ -4,107 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .wrapper {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-    canvas {
-      width: 100%;
-      height: 100vh;
-    }
-  </style>
+
   <body>
     <div class="wrapper">
       <canvas id="gameboard" style="background-color: cornflowerblue;" />
     </div>
   </body>
   <script src="../dist/js/app.js"></script>
-  <!-- <script>
-    var context = document.querySelector("#gameboard").getContext("2d");
-    var x = 0;
-    var y = 0;
-
-    document.addEventListener("keydown", function (evt) {
-      if (evt.keyCode == 39) {
-        context.clearRect(
-          0,
-          0,
-          document.querySelector("#gameboard").clientWidth,
-          document.querySelector("#gameboard").clientHeight
-        );
-
-        let width = document.querySelector("#gameboard").width;
-        console.log(x, width);
-        x += 10;
-        if (x >= width) {
-          x -= 10;
-          return;
-        }
-        console.log("opa");
-        var char = document
-          .querySelector("#gameboard")
-          .getContext("2d")
-          .fillRect(x, y, 10, 10);
-        context.stroke();
-      } else if (evt.keyCode == 37) {
-        context.clearRect(
-          0,
-          0,
-          document.querySelector("#gameboard").clientWidth,
-          document.querySelector("#gameboard").clientHeight
-        );
-        x -= 10;
-        if (x < 0) return;
-        var char = document
-          .querySelector("#gameboard")
-          .getContext("2d")
-          .fillRect(x, y, 10, 10);
-        context.stroke();
-      } else if (evt.keyCode == 38) {
-        context.clearRect(
-          0,
-          0,
-          document.querySelector("#gameboard").clientWidth,
-          document.querySelector("#gameboard").clientHeight
-        );
-        y -= 10;
-        if (y < 0) return;
-        var char = document
-          .querySelector("#gameboard")
-          .getContext("2d")
-          .fillRect(x, y, 10, 10);
-        context.stroke();
-      } else if (evt.keyCode == 40) {
-        context.clearRect(
-          0,
-          0,
-          document.querySelector("#gameboard").clientWidth,
-          document.querySelector("#gameboard").clientHeight
-        );
-        y += 10;
-        if (y > document.querySelector("#gameboard").clientHeight) return;
-        var char = document
-          .querySelector("#gameboard")
-          .getContext("2d")
-          .fillRect(x, y, 10, 10);
-        context.stroke();
-      }
-    });
-  </script> -->
 </html>
 
 <!-- Pontos surgem aleatoriamente -->
