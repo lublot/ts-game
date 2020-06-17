@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <canvas id="gameboard" style="background-color: cornflowerblue;" />
+    </div>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./dist/js/app.js"></script>
+  <script>
+    const socket = io('http://localhost:3000');
+    socket.on('news', (data) => {
+      console.log(data);
+      socket.emit('move', { my: 'data' });
+    });
+  </script>
+  <!-- <script>
+    let canvas = document.querySelector("#gameboard");
+    let context = canvas.getContext("2d");
+    let img = new Image();
+    img.addEventListener("load", function () {
+      let frames = 16;
+      let width = 70;
+      let fIndex = 1;
+      while (fIndex < 10) {
+        context.clearRect(70 * fIndex, 0, width, 64);
+        context.drawImage(img, 70 * fIndex, 0, width, 64, 0, 0, width, 64);
+        context.rotate(30 * Math.PI / 180);
+        fIndex += 1;
+      }
+    });
+    img.src = "./sprite.png";
+  </script> -->
+</html>
+
+<!-- Pontos surgem aleatoriamente -->
+<!-- Quando coletarem ganham um ponto, quem chegar a 10 pontos vence -->
+<!-- Quando colidirem vão se espalhar e cada um perde uma vida -->

@@ -7,6 +7,6 @@
     "preserveConstEnums": true,
     "sourceMap": false
   },
-  "include": ["lib"],
+  "include": ["app/lib/client/*"],
   "exclude": ["node_modules"]
 }
